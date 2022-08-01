@@ -1,0 +1,31 @@
+{
+    "name": "loantap/nsdl",
+    "license": "GPL-3.0-or-later",
+    "type": "awesome-handler",
+    "description": "NSDL PAN Verification",
+	"keywords": ["WordPress", "Low Code"," Awesome Enterprise","Shortcode","PAN","NSDL PAN Cerification","NSDL PAN Validation"],
+	"homepage": "https://getawesomestudio.com/",
+	"authors": [
+		{
+            "name": "Loantap",
+            "homepage": "https://loantap.in/"
+        }
+       
+    ],
+	 "support": {
+        "docs": "https://awxdocs.com/tutorials/"
+    },
+    "require": {
+        "php": ">=7.0",
+        "composer/installers": "~1.0",
+        "oomphinc/composer-installers-extender": "^2.0"
+    },
+	 "extra": { 
+		"installer-name": "pan_card"
+    },
+    "config": {
+		"process-timeout": 600,
+        "sort-packages": true
+    },
+	"prefer-stable": true
+}
