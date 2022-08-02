@@ -17,7 +17,7 @@ namespace aw2\nsdl;
 function pan_verify($atts,$content=null,$shortcode=null){
 
     if(\aw2_library::pre_actions('all',$atts,$content,$shortcode)==false)return;
-	extract( shortcode_atts( array(
+	extract( \aw2_library::shortcode_atts( array(
 		'pan_card'=>'',
 		'config'=>''
 		), $atts) );	
