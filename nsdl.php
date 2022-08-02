@@ -22,17 +22,17 @@ function pan_verify($atts,$content=null,$shortcode=null){
 		'config'=>''
 		), $atts) );	
 
-    $error=array('status'=>'error','message'=>'Config is should not be empty');
+    $error=array('status'=>'Failed','message'=>'Config is should not be empty');
 	if(empty($config) || !(is_array($config)) ){
 		return $error;
 	}
-	$error=array('status'=>'error','message'=>'Client id is missing in config');
+	$error=array('status'=>'Failed','message'=>'client_id is missing in config');
 	if(!isset($config['client_id']) || $config['client_id']==''){
 		return $error;
 	}
 		
 	$token =md5(time() . rand()); 
-	$data = $config['client_id'].$pancard;
+	$data = $config['client_id'].$pan_card;
 	$inputfilename=$config['input_file_name'].$token."_i.txt";
 	$outputfilename=$config['output_file_name'].$token."_o.txt";
 
@@ -74,7 +74,7 @@ function pan_verify($atts,$content=null,$shortcode=null){
 			$server_output = curl_exec ($ch);
 
 			if (curl_errno($ch)) {
-				$error=array('status'=>'error','message'=>'Request Error: ' .curl_error($ch));
+				$error=array('status'=>'Failed','message'=>'Request Error: ' .curl_error($ch));
 				return $error;
 			}
 
