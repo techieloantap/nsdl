@@ -14,7 +14,7 @@ namespace aw2\nsdl;
 
 
 \aw2_library::add_service('nsdl.pan_verify','NSDL PAN Card Verification',['namespace'=>__NAMESPACE__]);
-function pan_verify($atts,$content=null,$shortcode){
+function pan_verify($atts,$content=null,$shortcode=null){
 
     if(\aw2_library::pre_actions('all',$atts,$content,$shortcode)==false)return;
 	extract( shortcode_atts( array(
