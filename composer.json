@@ -21,7 +21,7 @@
         "oomphinc/composer-installers-extender": "^2.0"
     },
 	 "extra": { 
-		"installer-name": "pan_card"
+		"installer-name": "nsdl"
     },
     "config": {
 		"process-timeout": 600,
